@@ -1,53 +1,29 @@
 //Constantes de Requisição
-
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-//const api = require('../models/api');
-const axios = require('axios');
-
-// ----------------------------------------------------------------
-
 //Constantes de Configuração e realocação
-
-//const cep = require('../controllers/cepController');
+const api = require('../models/apiViaCep');
 const router = express.Router();
 
-// --------------------------    MIDWARES   --------------------------------------
+// --------------------------   Middleware   --------------------------------------
 
-function cepteste(req, res){
+function getCep(req, res) {
+    //Recebe valor do form contendo o CEP desejado
     let cep = req.body.cep;
-   handleViaCep(cep, resultado);
-
-   
-    function resultado (resu){
+    //Solicita dados da API ViaCep
+    api.handleViaCep(cep, resultado);
+    //Retorna o Resultado para o Client.
+    function resultado(resu) {
         console.log(JSON.stringify(resu.data));
-        //console.log(resu);
-        //console.log(resu.data);
         res.json(JSON.stringify(resu.data));
     }
 };
-
-
-
-function handleViaCep(req, res){ 
-    axios.get(`https://viacep.com.br/ws/${req}/json/`)
-    .then(res)
-    .catch(function (error) {
-        console.log(error);
-    })
-    .then(function () {
-        console.log('terminado');
-    });  
-}
-
-
-
 // --------------------------    ROTAS   --------------------------------------
 
-//usando o cors.
+//Usando o cors.
 router.use(cors());
-
-router.post("/", bodyParser.json(), cepteste);
-
+//Requesição de rota /Cep
+router.post("/", bodyParser.json(), getCep);
+//Export do sistema de rotas.
 module.exports = router;

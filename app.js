@@ -1,16 +1,10 @@
 //Constantes de Requisição;
-
     const express = require('express');
     const path = require('path');
     const apiRoute = require('./src/routes/cep.js');
-
-// ----------------------------------------------------------------
-
 //Constantes de Configuração e realocação;
-
     const app = express();
     const PORT =  3000; //Definição da porta do servidor;
-
 //----------------------------------------------------------------
 
 //Definindo repositorio de rotas da requisição CEP;
