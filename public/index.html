@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!--Configuração do Head-->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="Sistema para consulta de CEP utilizando a API ViaCep">
+        <meta name="author" content="Arthur Ramos">
+        <!--Titulo da Page-->
+        <title>Consulta CEP</title>
+        <!-- Parametros de requisição do bootstrap -->
+        <link href="/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./assents/CSS/blocks.css">
+        <!-- Parametros de requisição do Style.css personalizado-->
+        <link href="./assents/CSS/style.css" rel="stylesheet">
+        <!--Jquery e Bootstrap compatibles-->
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="/js/jquery.js"></script>
+        <!--Requisição ao Pagina de requisição JS/Jquery-->
+        <script rel="text/javascript" src="./assents/js/script.js"></script>
+        
+    </head>
+    
+    <body class="text-secondary">
+
+            <!--NavBar-->   
+            <header class="blog-header py-1 shadow">
+                <div class="row flex-nowrap justify-content-between align-items-center">
+                    <!--DIV de espaçamento-->
+                    <div class="col-4 pt-1"></div>
+                        <div class="col-4 text-center">
+                            <!--Logo do app "CEP"-->
+                            <img src="./assents/SVGs/SVG_logo.svg" class="bg-white pb-3 pt-3"/> 
+                        </div>
+                    <!--DIV de espaçamento-->
+                    <div class="col-4 d-flex justify-content-end align-items-center"></div>
+                </div>
+            </header>
+       
+            <!--Escopo-->
+            <main>
+                <section id="intro" class=" bg-white mb-5 mt-3 pb-5 pt-5 text-black-50">   
+                    <div class="container">                    
+                        <div class=" align-items-center bg-gradient bg-white pb-5 rounded rounded-3 row shadow">  
+                            <!--Escopo do Esquerdo do header-->     
+                            <div class="ms-5 col-lg-6 col pb-3 col-md-5 pt-3 col-sm-6">
+                                <!--Titulo-->
+                                <h1 class=" fw-bold mb-4 cor">Vamos buscar seu endereço?</h1>
+                                <!--Paragrafo-->
+                                <div class=" paragrafo">
+                                    <p class="mb-4 text-black-50">Para buscar é simples, basta informar o CEP da localidade, que faremos todo o trabalho por você</p>
+                                </div>
+                                <!--Input de envios-->
+                                <div class="input-group mb-3">
+                                    <input placeholder="Exemplo: 66035-140" type="text" maxlength="9" id="label_cep" class="form-control me-3 pe-0 rounded">
+                                    <button type="button" id="btnCep" class="btn btn-outline-warning me-5 ms-0 pe-3 ps-3 rounded-pill" data-bs-toggle="modal" data-bs-target="#modalEndereco" href="#">Consultar</button> 
+                                </div>
+                            </div>
+                            <!--FIM escopo do Esquerdo do header-->  
+
+                            <!--Escopo Direito do Header-->
+                            <div class="imagenIcon col-lg-5 col-md-6  pb-3 pt-3">
+                                <img class="img-fluid" src="./assents/SVGs/SVG_icon.svg"/>
+                            </div>
+                            <!-- FIM escopo direito-->
+                        </div>
+                    </div>
+                </section>
+            </main>
+            
+            <!-- Modal referente a resposta da consulta.-->
+            <div class="modal fade" id="modalEndereco" tabindex="-1" aria-labelledby="" aria-hidden="true">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title cor" id="modalResposta">Endereço</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="retorno">
+                    
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" onClick="window.location.reload();" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+           
+    </body>
+</html>

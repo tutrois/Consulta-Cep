@@ -1,0 +1,37 @@
+
+.paragrafo{
+    margin-right: 30%;
+    margin-bottom: 6%;
+    line-height: 1.5;
+    color:#828282;
+    font-family: "Cambria";
+}
+
+.cor{
+    color: #1F5BA1;
+}
+.btn-secondary{
+    background-color: #1F5BA1
+}
+
+.btn-outline-warning:hover {
+    background-color: #1F5BA1;
+    border-color: #FFD03E;
+    color: #FFD03E;
+}
+
+.btn-outline-warning{
+    border-color: #1F5BA1;
+    color: #1F5BA1;
+}
+.imagenIcon{
+    background-image: url(../SVGs/SVG_gosma.svg);
+    background-size: contain;
+    position: top;
+    background-repeat: no-repeat;
+
+}
+
+
+input::placeholder { color:#FFD03E}
+
