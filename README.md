@@ -50,6 +50,12 @@ Execute o Front-end do projeto:
 node app
 
 ```
+Agora é só acessar o endereço 
+```
+
+http://localhost:3000/
+
+```
 
 ***
 # <a name="TechnologiesUsed"></a> ⚙ Tecnologias e linguagens usadas
