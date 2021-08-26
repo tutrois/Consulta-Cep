@@ -6,6 +6,8 @@
 Uma interface de consulta de endereço utilizando a API ViaCep | Node.js ; HTML ; Bootstrap ; Jquery ; JS
 </p>
 
+![image](https://github.com/tutrois/Consulta-Cep/blob/main/layout_ui-ux/Captura%20de%20tela%201.png?raw=true)
+
 # 📌 Índice
 * 💡 [Funcionalidades](#features)
 * 🛠 [Instalação](#Installation)
